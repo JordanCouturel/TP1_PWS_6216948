@@ -3,6 +3,7 @@ import { Component,OnInit } from '@angular/core';
 import { Pays } from 'src/Models/Pays';
 import { Saison } from 'src/Models/Saison';
 import { League } from 'src/Models/League';
+import { Router } from '@angular/router';
 
 
 const headers = new HttpHeaders({
@@ -26,17 +27,20 @@ const headers = new HttpHeaders({
 
 export class AppComponent implements OnInit {
   title = 'TP1_6216948_PWS';
-  
-
-  constructor(private http: HttpClient) { }
-
-
   Reponse: any; // Variable pour stocker la réponse de l'API
   saisons: Saison[] = []; // Liste d'objets Saison
   league:League[]=[];
+  leagueName?: string;
+
+
+  constructor(private http: HttpClient,private router:Router) { }
+
+
+
 
   ngOnInit(): void {
     this.GetNHLLeague();
+
   }
 
   async GetNHLLeague(): Promise<void> {
@@ -63,7 +67,7 @@ export class AppComponent implements OnInit {
   
           // Create League objects and add them to the league array
           for (const x of this.Reponse.response) {
-            const ligue = new League(x.name, x.logo, x.country, x.seasons);
+            const ligue = new League(x.id,x.name, x.logo, x.seasons);
             this.league.push(ligue);
           }
         }
@@ -72,6 +76,11 @@ export class AppComponent implements OnInit {
         console.error('Error:', error);
       }
     );
+  }
+
+  onLeagueClick(leagueName: string) {
+    this.leagueName = leagueName;
+    this.router.navigate(['/saisons', leagueName]); 
   }
 }
  

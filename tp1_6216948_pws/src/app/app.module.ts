@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SaisonsComponent } from './saisons/saisons.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SaisonsComponent
   ],
   imports: [
     BrowserModule,

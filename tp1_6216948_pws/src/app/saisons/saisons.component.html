@@ -1,0 +1,16 @@
+<table class="table">
+<thead>
+    <tr>
+      <th>Date de début de saison</th>
+      <th>Date de fin de saison</th>
+      <th>Année de la saison</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let saison of Seasons">
+      <td>{{ saison.Start }}</td>
+      <td>{{ saison.End }}</td>
+      <td>{{ saison.annee }}</td>
+    </tr>
+  </tbody>
+</table>
