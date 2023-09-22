@@ -1,43 +1,22 @@
 <div style="padding: 86px;">
 <nav>
-  <h1>League :</h1>
-  <h3>Pays : </h3>
-  <a></a>
+  <h1>Les leagues</h1>
 </nav>
-
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th>Date de début de saison</th>
-      <th>Date de fin de saison</th>
-      <th>Année de la saison</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let saison of saisons">
-      <td>{{ saison.Start }}</td>
-      <td>{{ saison.End }}</td>
-      <td>{{ saison.annee }}</td>
-    </tr>
-  </tbody>
-</table> -->
-
 
 
 <table class="table">
   <thead>
     <tr>
+      <th>ID de la league</th>
       <th>Nom de la league</th>
       <th>Logo de la league</th>
-      <th>Pays de la league</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let league of league">
-      <td>{{ league.Nom }}</td>
-      <img src="{{ league.Logo }}">
-      <td>{{ league.Pays.Nom }}</td>
+      <td>{{ league.Id }}</td>
+      <td> <a (click)="onLeagueClick(league.Nom)">{{ league.Nom }}</a> </td>
+      <td><img src="{{ league.Logo }}"></td>
     </tr>
   </tbody>
 </table>
-</div>
