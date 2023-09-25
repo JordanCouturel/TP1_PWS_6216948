@@ -1,0 +1,33 @@
+
+<div style="padding: 86px;">
+    <nav>
+      <h1>Les leagues</h1>
+      
+    </nav>
+    
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID de la ligue</th>
+          <th>Nom de la ligue</th>
+          <th>Logo de la ligue</th>
+          <th>Saisons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let league of leagues">
+          <td>{{ league.Id }}</td>
+          <td> <a >{{ league.Nom }}</a> </td>
+          <td><img src="{{ league.Logo }}"></td>
+          <td><button [routerLink]="['/saisons', league.Nom]" class="btn btn-primary">Saisons</button></td>
+         
+        </tr>
+        <tr>
+         
+        </tr>
+      </tbody>
+    </table>
+    <router-outlet></router-outlet>
+    
+    

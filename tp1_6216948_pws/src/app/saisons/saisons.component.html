@@ -1,9 +1,12 @@
+
+<h1>Les saisons de la league</h1>
 <table class="table">
 <thead>
     <tr>
       <th>Date de début de saison</th>
       <th>Date de fin de saison</th>
       <th>Année de la saison</th>
+      <th>Classement</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +14,7 @@
       <td>{{ saison.Start }}</td>
       <td>{{ saison.End }}</td>
       <td>{{ saison.annee }}</td>
+      <td><button [routerLink]="['/classements', leagueid, saison.annee]">Voir le classement</button></td>
     </tr>
   </tbody>
 </table>
