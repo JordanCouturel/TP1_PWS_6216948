@@ -94,6 +94,7 @@ th{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  position:relative;
 }
 
 .button-32:not(:disabled):hover,
@@ -110,3 +111,11 @@ th{
 }
 
 
+
+
+.imgbg{
+  
+  position: absolute;
+  height: 20vh;
+  width: 100%;
+}

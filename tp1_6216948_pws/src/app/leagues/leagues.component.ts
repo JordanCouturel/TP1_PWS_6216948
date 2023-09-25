@@ -59,6 +59,8 @@ export class LeaguesComponent {
             const ligue = new League(x.id,x.name, x.logo, x.seasons);
             this.leagues.push(ligue);
           }
+          //enregistre la liste des parents dans le localstorage
+          localStorage.setItem('leagues', JSON.stringify(this.leagues));
         }
       },
       (error) => {
