@@ -1,9 +1,10 @@
 import { HttpClient,HttpHeaders,HttpClientModule  } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
-import { Pays } from 'src/Models/Pays';
 import { Saison } from 'src/Models/Saison';
 import { League } from 'src/Models/League';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 
 const headers = new HttpHeaders({
@@ -26,62 +27,12 @@ const headers = new HttpHeaders({
 
 
 export class AppComponent implements OnInit {
-  title = 'TP1_6216948_PWS';
-  Reponse: any; // Variable pour stocker la réponse de l'API
-  saisons: Saison[] = []; // Liste d'objets Saison
-  league:League[]=[];
-  leagueName?: string;
-
-
-  constructor(private http: HttpClient,private router:Router) { }
-
-
-
-
   ngOnInit(): void {
-    this.GetNHLLeague();
-
+    throw new Error('Method not implemented.');
   }
+  title = 'TP1_6216948_PWS';
+ 
 
-  async GetNHLLeague(): Promise<void> {
-    const url = `https://api-hockey.p.rapidapi.com/leagues/`;
-  
-    this.http.get<any>(url, { headers }).subscribe(
-      (response) => {
-        this.Reponse = response;
-  
-        // Create a league object from the API response
-        const leagueFromResponse = this.Reponse.response[0];
-  
-        // Populate the pays array with the country information
-        var pays = new Pays(leagueFromResponse.country.code, leagueFromResponse.country.name);
-  
-        // Check if there are seasons in the response
-        if (this.Reponse.response && this.Reponse.response.length > 0) {
-          // Create Saison objects and add them to the saisons array
-          const seasonsData = leagueFromResponse.seasons;
-          for (const season of seasonsData) {
-            const saison = new Saison(season.start, season.end, season.season);
-            this.saisons.push(saison);
-          }
-  
-          // Create League objects and add them to the league array
-          for (const x of this.Reponse.response) {
-            const ligue = new League(x.id,x.name, x.logo, x.seasons);
-            this.league.push(ligue);
-          }
-        }
-      },
-      (error) => {
-        console.error('Error:', error);
-      }
-    );
-  }
-
-  onLeagueClick(leagueName: string) {
-    this.leagueName = leagueName;
-    this.router.navigate(['/saisons', leagueName]); 
-  }
 }
  
 
