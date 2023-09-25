@@ -1,0 +1,38 @@
+{
+    "app-leagues":{
+        "title":"The leagues",
+        "leagueID":"League's ID",
+        "Name":"League's name",
+        "Logo":"League's logo",
+        "Saisons":"Seasons"
+    },
+
+    "app-root":{
+        "bouton":"Francais",
+        "listleagues":"Browse list of leagues"
+
+    },
+
+    "app-saisons":{
+        "title":"The League's seasons",
+        "debut":"Season start date",
+        "fin":"Season end date",
+        "annee":"Year",
+        "classement":"Rankings",
+        "voirclassement":"See rankings"
+    },
+
+    "app-rankings":{
+        "title":"Season ranking",
+        "League":"League",
+        "team":"Team",
+        "teamlogo":"Team logo"
+
+    }
+
+
+
+
+
+    
+    }

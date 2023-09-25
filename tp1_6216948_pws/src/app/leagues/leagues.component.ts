@@ -5,6 +5,7 @@ import { League } from 'src/Models/League';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core/dist/public-api';
 
 
 const headers = new HttpHeaders({
@@ -66,3 +67,4 @@ export class LeaguesComponent {
     );
   }
 }
+

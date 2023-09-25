@@ -1,4 +1,11 @@
+
 td {
-    vertical-align: middle;
-    align-self: space-between;
-  }
+  vertical-align: middle;
+  text-align: center;
+}
+
+th{
+  vertical-align: middle;
+  text-align: center;
+  
+}
