@@ -1,0 +1,35 @@
+{
+"app-leagues":{
+    "title":"Les ligues",
+    "leagueID":"ID de la ligue",
+    "Name":"Nom de la ligue",
+    "Logo":"Logo de la ligue",
+    "Saisons":"Saisons"
+},
+
+"app-root":{
+    "bouton":"Anglais",
+    "listleagues":"Parcourir la liste des ligues"
+},
+
+"app-saisons":{
+    "title":"Les saisons de la league",
+    "debut":"Date de début de saison",
+    "fin":"Date de fin de saison",
+    "annee":"Année de la saison",
+    "classement":"Classement",
+    "voirclassement":"Voir le classement"
+},
+
+
+"app-rankings":{
+    "title":"Classement de la saison",
+    "League":"Ligue",
+    "team":"Équipe",
+    "teamlogo":"Logo de l'équipe"
+
+}
+
+
+
+}

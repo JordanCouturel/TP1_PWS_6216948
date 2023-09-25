@@ -1,7 +1,7 @@
 
 <div style="padding: 86px;">
     <nav>
-      <h1>Les leagues</h1>
+      <h1 style="text-align:center; margin-bottom: 70px;" translate>app-leagues.title</h1>
       
     </nav>
     
@@ -9,10 +9,10 @@
     <table class="table">
       <thead>
         <tr>
-          <th>ID de la ligue</th>
-          <th>Nom de la ligue</th>
-          <th>Logo de la ligue</th>
-          <th>Saisons</th>
+          <th translate>app-leagues.leagueID</th>
+          <th translate>app-leagues.Name</th>
+          <th translate>app-leagues.Logo</th>
+          <th translate>app-leagues.Saisons</th>
         </tr>
       </thead>
       <tbody>
@@ -20,7 +20,7 @@
           <td>{{ league.Id }}</td>
           <td> <a >{{ league.Nom }}</a> </td>
           <td><img src="{{ league.Logo }}"></td>
-          <td><button [routerLink]="['/saisons', league.Nom]" class="btn btn-primary">Saisons</button></td>
+          <td><button translate [routerLink]="['/saisons', league.Nom]" class="button-32">app-leagues.Saisons</button></td>
          
         </tr>
         <tr>

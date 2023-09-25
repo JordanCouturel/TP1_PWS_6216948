@@ -1,12 +1,12 @@
 
-<h1>Les saisons de la league</h1>
+<h1 style="text-align: center; margin-bottom: 70px;" translate>app-saisons.title</h1>
 <table class="table">
 <thead>
     <tr>
-      <th>Date de début de saison</th>
-      <th>Date de fin de saison</th>
-      <th>Année de la saison</th>
-      <th>Classement</th>
+      <th translate>app-saisons.debut</th>
+      <th translate>app-saisons.fin</th>
+      <th translate>app-saisons.annee</th>
+      <th translate>app-saisons.classement</th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +14,7 @@
       <td>{{ saison.Start }}</td>
       <td>{{ saison.End }}</td>
       <td>{{ saison.annee }}</td>
-      <td><button [routerLink]="['/classements', leagueid, saison.annee]">Voir le classement</button></td>
+      <td><button class="button-32" translate [routerLink]="['/classements', leagueid, saison.annee]">app-saisons.voirclassement</button></td>
     </tr>
   </tbody>
 </table>

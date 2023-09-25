@@ -1,4 +1,11 @@
-<button class="btn btn-secondary" style="height: 75px; width: 200px; margin: 50px;" [routerLink]="['ligues']">Liste des ligues</button>
+<header>
+ 
+</header>
 
+   <div style=" display: flex;
+    justify-content: space-between;">
+        <button translate style="margin: 50px; " class="button-32" [routerLink]="['ligues']">app-root.listleagues</button>
+    <button class="button-41 " style="margin: 50px;" translate (click)="changeLanguage()">app-root.bouton</button>
+    </div>
 
 <router-outlet></router-outlet>
