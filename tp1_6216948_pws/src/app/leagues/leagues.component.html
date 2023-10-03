@@ -1,0 +1,33 @@
+
+<div style="padding: 86px; ">
+    <nav>
+      <h1 style="text-align:center; margin-bottom: 70px;" translate>app-leagues.title</h1>
+      
+    </nav>
+    
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th translate>app-leagues.leagueID</th>
+          <th translate>app-leagues.Name</th>
+          <th translate>app-leagues.Logo</th>
+          <th translate>app-leagues.Saisons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let league of leagues">
+          <td>{{ league.Id }}</td>
+          <td> <a >{{ league.Nom }}</a> </td>
+          <td><img src="{{ league.Logo }}"></td>
+          <td><button translate [routerLink]="['/saisons', league.Nom]" class="button-32">app-leagues.Saisons</button></td>
+         
+        </tr>
+        <tr>
+         
+        </tr>
+      </tbody>
+    </table>
+    <router-outlet></router-outlet>
+    
+    

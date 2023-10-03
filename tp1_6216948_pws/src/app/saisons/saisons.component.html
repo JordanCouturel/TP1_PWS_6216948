@@ -1,0 +1,20 @@
+
+<h1 style="text-align: center; margin-top:100px;margin-bottom: 70px;" translate>app-saisons.title</h1>
+<table class="table">
+<thead>
+    <tr>
+      <th translate>app-saisons.debut</th>
+      <th translate>app-saisons.fin</th>
+      <th translate>app-saisons.annee</th>
+      <th translate>app-saisons.classement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let saison of Seasons">
+      <td>{{ saison.Start }}</td>
+      <td>{{ saison.End }}</td>
+      <td>{{ saison.annee }}</td>
+      <td><button class="button-32" translate [routerLink]="['/classements', leagueid, saison.annee]">app-saisons.voirclassement</button></td>
+    </tr>
+  </tbody>
+</table>
